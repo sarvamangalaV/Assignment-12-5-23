@@ -1,0 +1,23 @@
+// Step 1: Declare the delegate
+delegate void MyMulticastDelegate(string message);
+
+// Step 2: Define methods that match the delegate signature
+static void Method1(string message)
+{
+    Console.WriteLine("Method1: " + message);
+}
+
+static void Method2(string message)
+{
+    Console.WriteLine("Method2: " + message);
+}
+
+static void Main()
+{
+    // Step 3: Create an instance of the delegate and associate it with multiple methods
+    MyMulticastDelegate myDelegate = Method1;
+    myDelegate += Method2;
+
+    // Step 4: Invoke the delegate, which will call all the associated methods
+    myDelegate("Hello, multicast delegate!");
+}
