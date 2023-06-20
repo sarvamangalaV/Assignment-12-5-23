@@ -1,0 +1,17 @@
+// Step 1: Declare the delegate
+delegate void MyDelegate(string message);
+
+// Step 2: Define a method that matches the delegate signature
+static void MyMethod(string message)
+{
+    Console.WriteLine("MyMethod: " + message);
+}
+
+static void Main()
+{
+    // Step 3: Create an instance of the delegate and associate it with the method
+    MyDelegate myDelegate = MyMethod;
+
+    // Step 4: Invoke the delegate
+    myDelegate("Hello, world!");
+}
