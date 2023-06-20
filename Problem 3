@@ -1,0 +1,11 @@
+static void Main()
+{
+    // Step 1: Create and use an anonymous delegate
+    Action<string> myDelegate = delegate (string message)
+    {
+        Console.WriteLine("Anonymous Delegate: " + message);
+    };
+
+    // Step 2: Invoke the delegate
+    myDelegate("Hello, anonymous delegate!");
+}
